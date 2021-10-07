@@ -11,9 +11,51 @@ updated by RV on October 21, 2021 at 9:30 AM
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Mul Table</title>
+        <title>Multiplication Table</title>
+        <link href="style.css" rel="stylesheet">
     </head>
     <body>
-        
+        <div id = "wrapper">
+            <header>Multiplication Table</header>
+            <form>
+                <label for = "rowmin">Minimum Row Value:</label><br>
+                <input id = "rowmin" placeholder = "Min Row Value">
+                <label for = "rowmax">Maximum Row Value:</label><br>
+                <input id = "rowmax" placeholder = "Max Row Value">
+                <label for = "colmin">Minimum Column Value:</label><br>
+                <input id = "colmin" placeholder = "Min Column Value">
+                <label for = "colmin">Minimum Column Value:</label><br>
+                <input id = "colmax" placeholder = "Max Column Value"><br>
+                <input type = "submit" value = "Submit" onclick="mulfun()">
+            </form>
+            <div id = "tblcontent"></div>
+            <script tag = "dyntable">
+                function mulfcn()
+                {
+                    document.getElementById("tblcontent").innerHTML = "Default Content";
+                    var rmin = document.getElementById("rowmin").value;
+                    var rmax = document.getElementById("rowmax").value;
+                    var cmin = document.getElementById("colmin").value;
+                    var cmax = document.getElementById("colmax").value;
+
+                    for (var r = rmin; r <= rmax; r++)
+                    {
+                        let tr = document.createElement('tr');
+                    //  table += '<tr>';
+                        for (var c = cmin; c <= cmax; c++)
+                        {
+                            let td = document.createElement('td');
+                            td.innerHTML = '<p>r*c</p>'
+                    //      table += '<td>' + r * c + '</td>';
+                            tr.innerHTML += td;    
+                        }
+                    //  table += '</tr>';
+                    }
+                //    document.write('<table border = 1' + table + '</table>');
+                    document.getElementById("tblcontent").innerHTML = tr;
+                }
+                
+            </script>
+        </div>
     </body>
 </html>
