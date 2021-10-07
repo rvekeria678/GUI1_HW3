@@ -26,7 +26,7 @@ updated by RV on October 21, 2021 at 9:30 AM
                 <input id = "colmin" placeholder = "Min Column Value">
                 <label for = "colmin">Minimum Column Value:</label><br>
                 <input id = "colmax" placeholder = "Max Column Value"><br>
-                <input type = "submit" value = "Submit" onclick="mulfun()">
+                <input type = "submit" value = "Submit" action="mulfun()">
             </form>
             <div id = "tblcontent"></div>
             <script tag = "dyntable">
@@ -52,7 +52,7 @@ updated by RV on October 21, 2021 at 9:30 AM
                     //  table += '</tr>';
                     }
                 //    document.write('<table border = 1' + table + '</table>');
-                    document.getElementById("tblcontent").innerHTML = tr;
+                    document.write("tblcontent");
                 }
                 
             </script>
