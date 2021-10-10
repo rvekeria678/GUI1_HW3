@@ -28,8 +28,8 @@ updated by RV on October 21, 2021 at 9:30 AM
                     <input id = "colmin" placeholder = "Enter an integer">
                     <label for = "colmin">Maximum Column Value:</label><br>
                     <input id = "colmax" placeholder = "Enter an integer"><br>
-                    <button type = "button" class="btn btn-primary mt-3" id = "submit-btn">Submit</button>
-                    <button type = "button" class="btn btn-primary mt-3" id = "clear-btn" onclick="clr()">Clear</button>
+                    <button type = "button" class="btn btn-primary mt-2 ml-3" id = "submit-btn">Submit</button>
+                    <button type = "button" class="btn btn-primary mt-2" id = "clear-btn" onclick="clr()">Clear</button>
                 </div>
             </form>
             <div id="table-container"></div>
@@ -57,7 +57,7 @@ updated by RV on October 21, 2021 at 9:30 AM
                     else if (+rmax > 50 || +rmax < -50) {
                         document.getElementById('table-container').innerHTML = 'Please make sure the row minimum is between -50 and 50!';
                     }
-                    else if (+cmin > 50 || +cmax < -50) {
+                    else if (+cmin > 50 || +cmin < -50) {
                         document.getElementById('table-container').innerHTML = 'Please make sure the row minimum is between -50 and 50!';
                     }
                     else if (+cmax > 50 || +cmax < -50) {
