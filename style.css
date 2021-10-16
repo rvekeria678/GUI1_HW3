@@ -1,5 +1,10 @@
+/*
+
+*/
 body {
     background-image: linear-gradient(to bottom right, lightsteelblue, midnightblue);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 #wrapper {
     display: grid;
@@ -34,12 +39,13 @@ header {
     grid-row-end: 2;
 }
 table {
-    background: white;
+    background: lightgrey;
     border-collapse: collapse;
+    table-layout: fixed;
 }
 td, tr {
     border: 1px solid black;
-    padding: 5px;
+    padding: 2px;
 }
 tr:first-child td:first-child {
     background: lightgray;
@@ -57,4 +63,7 @@ tr:first-child td{
 }
 tr:first-child td:last-child{
     border-right: 1px solid black;
+}
+td:nth-child(2n){
+    background: white;
 }

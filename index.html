@@ -45,25 +45,41 @@ updated by RV on October 21, 2021 at 9:30 AM
                     var cmin = document.getElementById("colmin").value;
                     var cmax = document.getElementById("colmax").value;
 
+                    var rminVal = document.getElementById("rowmin");
+                    var rmaxVal = document.getElementById("rowmax");
+                    var cminVal = document.getElementById("colmin");
+                    var cmaxVal = document.getElementById("colmin");
+
+
                     if (+rmin > +rmax) {
                         document.getElementById('table-container').innerHTML = 'Please make sure the row minimum is less than or equal to row maximum!';
+                        rminVal.style.backgroundColor = "salmon";
                     }
                     else if (+cmin > +cmax) {
                         document.getElementById('table-container').innerHTML = 'Please make sure the column minimum is less than or equal to column maximum!';
+                        cminVal.style.backgroundColor = "salmon";
                     }
                     else if (+rmin > 50 || +rmin < -50) {
                         document.getElementById('table-container').innerHTML = 'Please make sure the row minimum is between -50 and 50!';
-                    }
+                        rminVal.style.backgroundColor = "salmon";                    }
                     else if (+rmax > 50 || +rmax < -50) {
                         document.getElementById('table-container').innerHTML = 'Please make sure the row minimum is between -50 and 50!';
+                        rmaxVal.style.backgroundColor = "salmon";
                     }
                     else if (+cmin > 50 || +cmin < -50) {
                         document.getElementById('table-container').innerHTML = 'Please make sure the row minimum is between -50 and 50!';
+                        cminVal.style.backgroundColor = "salmon";
                     }
                     else if (+cmax > 50 || +cmax < -50) {
                         document.getElementById('table-container').innerHTML = 'Please make sure the row minimum is between -50 and 50!';
+                        cminVal.style.backgroundColor = "salmon";
                     }
                     else {
+                        rminVal.style.backgroundColor = "white";
+                        rmaxVal.style.backgroundColor = "white";
+                        cminVal.style.backgroundColor = "white";
+                        cmaxVal.style.backgroundColor = "white";
+
                         var table = '';
                         var y = +rmin;
 
