@@ -18,6 +18,9 @@ updated by RV on October 21, 2021 at 9:30 AM
     <body>
         <div id = "wrapper">
             <header>Multiplication Table</header>
+            <!--
+                Reference: https://www.w3schools.com/html/html_forms.asp
+            -->
             <form>
                 <div class='form-group'>
                     <label for = "rowmin">Minimum Row Value:</label><br>
@@ -36,9 +39,13 @@ updated by RV on October 21, 2021 at 9:30 AM
             <script type='text/javascript'>
                 const TblAdd = document.querySelector("#submit-btn");
                 TblAdd.addEventListener("click", mulfcn);
+                /* Reference: https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp
+                */
                 document.getElementById("clear-btn").disabled = true;
                 function mulfcn()
                 {
+                    /* Reference: https://www.w3schools.com/Jsref/met_document_getelementbyid.asp
+                    */
                     document.getElementById("clear-btn").disabled = false;
                     var rmin = document.getElementById("rowmin").value; 
                     var rmax = document.getElementById("rowmax").value;
@@ -48,10 +55,32 @@ updated by RV on October 21, 2021 at 9:30 AM
                     var rminVal = document.getElementById("rowmin");
                     var rmaxVal = document.getElementById("rowmax");
                     var cminVal = document.getElementById("colmin");
-                    var cmaxVal = document.getElementById("colmin");
+                    var cmaxVal = document.getElementById("colmax");
 
-
-                    if (+rmin > +rmax) {
+                    /* Reference: https://stackoverflow.com/questions/61550004/check-if-string-contains-any-letter-javascript-jquery
+                    */
+                   /* Reference: https://www.w3schools.com/jsref/prop_html_innerhtml.asp
+                   */
+                    var regExp = /[a-zA-Z]/g;
+                    if (regExp.test(rmin)) {
+                        document.getElementById('table-container').innerHTML = 'Please make sure the row minimum has no letters!';
+                        /* Reference: https://www.w3schools.com/jsref/prop_style_backgroundcolor.asp   
+                        */
+                        rminVal.style.backgroundColor = "salmon";
+                    }
+                    else if (regExp.test(rmax)) {
+                        document.getElementById('table-container').innerHTML = 'Please make sure the row minimum has no letters!';
+                        rmaxVal.style.backgroundColor = "salmon";
+                    }
+                    else if (regExp.test(cmin)) {
+                        document.getElementById('table-container').innerHTML = 'Please make sure the column minimum has no letters!';
+                        cminVal.style.backgroundColor = "salmon";
+                    }
+                    else if (regExp.test(cmax)) {
+                        document.getElementById('table-container').innerHTML = 'Please make sure the row minimum has no letters!';
+                        cmaxVal.style.backgroundColor = "salmon";
+                    }
+                    else if (+rmin > +rmax) {
                         document.getElementById('table-container').innerHTML = 'Please make sure the row minimum is less than or equal to row maximum!';
                         rminVal.style.backgroundColor = "salmon";
                     }
@@ -72,7 +101,7 @@ updated by RV on October 21, 2021 at 9:30 AM
                     }
                     else if (+cmax > 50 || +cmax < -50) {
                         document.getElementById('table-container').innerHTML = 'Please make sure the row minimum is between -50 and 50!';
-                        cminVal.style.backgroundColor = "salmon";
+                        cmaxVal.style.backgroundColor = "salmon";
                     }
                     else {
                         rminVal.style.backgroundColor = "white";
