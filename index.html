@@ -69,38 +69,39 @@ updated by RV on October 21, 2021 at 9:30 AM
                         rminVal.style.backgroundColor = "salmon";
                     }
                     else if (regExp.test(rmax)) {
-                        document.getElementById('table-container').innerHTML = 'Please make sure the row minimum has no letters!';
+                        document.getElementById('table-container').innerHTML = '<h2>Please make sure the row minimum has no letters!</h2>';
                         rmaxVal.style.backgroundColor = "salmon";
                     }
                     else if (regExp.test(cmin)) {
-                        document.getElementById('table-container').innerHTML = 'Please make sure the column minimum has no letters!';
+                        document.getElementById('table-container').innerHTML = '<h2>Please make sure the column minimum has no letters!</h2>';
                         cminVal.style.backgroundColor = "salmon";
                     }
                     else if (regExp.test(cmax)) {
-                        document.getElementById('table-container').innerHTML = 'Please make sure the row minimum has no letters!';
+                        document.getElementById('table-container').innerHTML = '<h2>Please make sure the row minimum has no letters!</h2>';
                         cmaxVal.style.backgroundColor = "salmon";
                     }
                     else if (+rmin > +rmax) {
-                        document.getElementById('table-container').innerHTML = 'Please make sure the row minimum is less than or equal to row maximum!';
+                        document.getElementById('table-container').innerHTML = '<h2>Please make sure the row minimum is less than or equal to row maximum!</h2>';
                         rminVal.style.backgroundColor = "salmon";
                     }
                     else if (+cmin > +cmax) {
-                        document.getElementById('table-container').innerHTML = 'Please make sure the column minimum is less than or equal to column maximum!';
+                        document.getElementById('table-container').innerHTML = '<h2>Please make sure the column minimum is less than or equal to column maximum!</h2>';
                         cminVal.style.backgroundColor = "salmon";
                     }
                     else if (+rmin > 50 || +rmin < -50) {
-                        document.getElementById('table-container').innerHTML = 'Please make sure the row minimum is between -50 and 50!';
-                        rminVal.style.backgroundColor = "salmon";                    }
+                        document.getElementById('table-container').innerHTML = '<h2>Please make sure the row minimum is between -50 and 50!</h2>';
+                        rminVal.style.backgroundColor = "salmon";                    
+                    }
                     else if (+rmax > 50 || +rmax < -50) {
-                        document.getElementById('table-container').innerHTML = 'Please make sure the row minimum is between -50 and 50!';
+                        document.getElementById('table-container').innerHTML = '<h2>Please make sure the row minimum is between -50 and 50!</h2>';
                         rmaxVal.style.backgroundColor = "salmon";
                     }
                     else if (+cmin > 50 || +cmin < -50) {
-                        document.getElementById('table-container').innerHTML = 'Please make sure the row minimum is between -50 and 50!';
+                        document.getElementById('table-container').innerHTML = '<h2>Please make sure the row minimum is between -50 and 50!</h2>';
                         cminVal.style.backgroundColor = "salmon";
                     }
                     else if (+cmax > 50 || +cmax < -50) {
-                        document.getElementById('table-container').innerHTML = 'Please make sure the row minimum is between -50 and 50!';
+                        document.getElementById('table-container').innerHTML = '<h2>Please make sure the row minimum is between -50 and 50!</h2>';
                         cmaxVal.style.backgroundColor = "salmon";
                     }
                     else {
