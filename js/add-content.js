@@ -1,3 +1,15 @@
+
+/*
+File: add-content.js
+GUI Assignment: Creating a functional multiplication table
+Raj Vekeria, UMass Lowell Computer Science, rvekeria@cs.uml.edu
+Copyright(c) 2021 by Raj. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author
+updated by RV on October 21, 2021 at 9:30 AM
+*/
+/* Reference: https://www.w3schools.com/js/js_htmldom_eventlistener.asp
+              https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector
+*/
 const TblAdd = document.querySelector("#submit-btn");
 TblAdd.addEventListener("click", mulfcn);
 /* Reference: https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp
